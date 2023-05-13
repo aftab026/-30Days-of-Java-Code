@@ -1,0 +1,45 @@
+/*
+Task
+Given a string, S, of length N that is indexed from  to N - 1, print its even-indexed and odd-indexed characters as 2 space-separated strings on a single line (see the Sample below for more detail).
+
+Note:0  is considered to be an even index.
+Example
+s = adbecf
+Print abc def
+ */
+
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        
+        Scanner sc  = new Scanner(System.in);
+    //String s = sc.next();
+    int t = sc.nextInt();
+    String evn = "";
+    String odd = "";
+    for(int j = 0; j< t; j++){
+        String s = sc.next();
+        for(int i = 0;i <=s.length()-1;i++){
+            if(i%2 == 0){
+                evn = evn + s.charAt(i);
+
+            }
+            else{
+                odd = odd + s.charAt(i);
+            }
+        } 
+        System.out.println(evn + " " + odd);    
+        evn = "";
+        odd = ""; 
+    }
+
+
+    sc.close();
+
+    }
+}
